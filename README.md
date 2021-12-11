@@ -12,17 +12,24 @@ touch requirements.txt
 pip install -r requirements.txt
 touch README.md
 ```
-
+```bash
 git init
-
+```
+```bash
 dvc init
-
+```
+```bash
 dvc add data_given/winequality.csv
-
+```
+```bash
 git add . && git commit -m "first commit"
-
+```
+```bash
 git remote add origin https://github.com/keithferns98/simple_wine_cicd.git
-
+```
+```bash
 git branch -M main
-
+```
+```bash
 git push -u origin main
+```

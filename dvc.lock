@@ -32,3 +32,19 @@ stages:
     - path: data/processed/train_winequality.csv
       md5: eb194c439f11a763691ae2f66e305d74
       size: 76075
+  train_and_evaluate:
+    cmd: python src/train_and_evaluate.py --config=params.yaml
+    deps:
+    - path: data/processed/test_winequality.csv
+      md5: 420389d6fcceeb7da1311c6b14af875f
+      size: 19157
+    - path: data/processed/train_winequality.csv
+      md5: eb194c439f11a763691ae2f66e305d74
+      size: 76075
+    - path: src/train_and_evaluate.py
+      md5: 9a538935d34da274a829066e297598f1
+      size: 2475
+    outs:
+    - path: saved_models/model.joblib
+      md5: a3c128cf8c479ef440cbe5d4da5f5a21
+      size: 1336
